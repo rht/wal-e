@@ -72,7 +72,8 @@ def configure_guts(*args, **kwargs):
         try:
             # Nobody can escape syslog, for now, and this default only
             # works on Linux.
-            handlers.append(logging.handlers.SysLogHandler(syslog_address))
+            #handlers.append(logging.handlers.SysLogHandler(syslog_address))
+            pass
         except EnvironmentError, e:
             if e.errno == errno.ENOENT:
                 # Silently do-not-write to syslog if the socket cannot
